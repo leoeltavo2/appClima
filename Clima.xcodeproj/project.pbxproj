@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6004E7E0271484970074412C /* ClimaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6004E7DF271484970074412C /* ClimaData.swift */; };
+		6004E7E2271486140074412C /* ClimaModelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6004E7E1271486140074412C /* ClimaModelo.swift */; };
+		604ED96027108F8900AC6032 /* ClimaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604ED95F27108F8900AC6032 /* ClimaManager.swift */; };
 		60D12AF4270F50A800093C84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D12AF3270F50A800093C84 /* AppDelegate.swift */; };
 		60D12AF6270F50A800093C84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D12AF5270F50A800093C84 /* SceneDelegate.swift */; };
 		60D12AF8270F50A800093C84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D12AF7270F50A800093C84 /* ViewController.swift */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6004E7DF271484970074412C /* ClimaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimaData.swift; sourceTree = "<group>"; };
+		6004E7E1271486140074412C /* ClimaModelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimaModelo.swift; sourceTree = "<group>"; };
+		604ED95F27108F8900AC6032 /* ClimaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimaManager.swift; sourceTree = "<group>"; };
 		60D12AF0270F50A800093C84 /* Clima.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clima.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D12AF3270F50A800093C84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60D12AF5270F50A800093C84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +69,9 @@
 				60D12AFC270F50AA00093C84 /* Assets.xcassets */,
 				60D12AFE270F50AA00093C84 /* LaunchScreen.storyboard */,
 				60D12B01270F50AA00093C84 /* Info.plist */,
+				604ED95F27108F8900AC6032 /* ClimaManager.swift */,
+				6004E7DF271484970074412C /* ClimaData.swift */,
+				6004E7E1271486140074412C /* ClimaModelo.swift */,
 			);
 			path = Clima;
 			sourceTree = "<group>";
@@ -138,9 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6004E7E2271486140074412C /* ClimaModelo.swift in Sources */,
 				60D12AF8270F50A800093C84 /* ViewController.swift in Sources */,
 				60D12AF4270F50A800093C84 /* AppDelegate.swift in Sources */,
+				604ED96027108F8900AC6032 /* ClimaManager.swift in Sources */,
 				60D12AF6270F50A800093C84 /* SceneDelegate.swift in Sources */,
+				6004E7E0271484970074412C /* ClimaData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
