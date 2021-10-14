@@ -9,13 +9,22 @@ import Foundation
 
 struct ClimaData: Codable {
     let name: String
-    let temp: Int
+    let timezone: Int
     let main: Main
-    //let coord: NSFileCoordinator
-    //let weather: [Weather]
+    let coord: Coord
+    let weather: [Weather]
 }
 
 struct Main: Codable {
     let temp: Double
-    let humidity: Int
+}
+
+struct Coord: Codable {
+    let lon: Double
+    let lat: Double
+}
+
+struct Weather: Codable {
+    let id: Int
+    let description: String
 }
