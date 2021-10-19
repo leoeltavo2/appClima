@@ -6,8 +6,19 @@
 //
 
 import Foundation
+import CoreLocation
+
+
+//PROTOCOLO
+protocol climaManagerDelegate{
+    func actualizarClima(clima: ClimaModelo)
+    func huboError(cualErro: Error)
+}
 
 struct ClimaManager{
+    
+    var delegado: climaManagerDelegate?
+    
     let urlClima = "https://api.openweathermap.org/data/2.5/weather?appid=43c02b88939bc65afefdef7ff3b31822&lang=es&units=metric&q="
     
     func buscarClima(nombreCiudad: String){
@@ -15,6 +26,13 @@ struct ClimaManager{
         //print("URL String: \(urlString)")
         realizarSolicitud(urlString: urlString)
     }
+    
+   //BUSCAR POR GPS
+    func buscarGPS(lat: CLLocationDegrees, lang: CLLocationDegrees){
+        let urlString = "https://api.openweathermap.org/data/2.5/weather?lat=\(lat)&lon=\(lang)&appid=43c02b88939bc65afefdef7ff3b31822&lang=es&units=metric&q="
+        realizarSolicitud(urlString: urlString)
+    }
+    
     
     func realizarSolicitud(urlString: String) {
         //1.- Crear URL
@@ -33,7 +51,7 @@ struct ClimaManager{
                 if let datosSeguros = datos  {
                     // Crear mi Obj Personalizado
                     if let objClima = parseJSON(climaData: datosSeguros) {
-                        //delegado.actualizarClima(clima: Clima)
+                        delegado?.actualizarClima(clima: objClima)
                     }
                 }
             }
@@ -60,7 +78,8 @@ struct ClimaManager{
             return objClimaJson
             
         } catch {
-            print("Error: \(error.localizedDescription)")
+//            print("Error: \(error.localizedDescription)")
+            delegado?.huboError(cualErro: error)
             return nil
         }
     }
@@ -80,5 +99,5 @@ struct ClimaManager{
 //            print("Datos Seguros: \(datosString)")
 //        }
 //    }
-    
+//    
 }
